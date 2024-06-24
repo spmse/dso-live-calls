@@ -1,13 +1,14 @@
 # Variables declaration
+from typing import List
 a = ['a', 1, 'b']
 first = a[0]
 last = a[-1]
-print("initial",a)
+print("initial", a)
 # print out list info
-print("only first element",a[0])
-a[0] = last # a[0] -> 'b'
+print("only first element", a[0])
+a[0] = last  # a[0] -> 'b'
 a[-1] = first
-print("final",a)
+print("final", a)
 # Generating Lists
 # generate a list of 1000 number elements --> 0 - 1000
 numbers_to_thousand = [y for y in range(1001)]
@@ -30,10 +31,11 @@ for x in numbers_to_thousand:
     if x % 2 == 0 and x % 4 == 0:
         list_of_twos_and_fours.append(x)
 
-# print(list_of_twos_and_fours) 
+# print(list_of_twos_and_fours)
 # print("------------------------")
 list_of_fours = [x for x in numbers_to_thousand if x % 2 == 0 and x % 4 == 0]
 # print(list_of_fours)
+
 
 def filter_for_fours(number_list):
     result = []
@@ -42,5 +44,47 @@ def filter_for_fours(number_list):
             result.append(x)
     return result
 
+
 list_of_fours2 = filter_for_fours(range(250000, 6000000))
 print(list_of_fours2)
+
+# region: filter list for numbers that can be divided by 3
+
+
+def filter_for_threes(number_list: List[int]) -> List[int]:
+    """
+    Create a function that receives a list of numbers and only returns
+    a list that contains numbers that are divisible by 3.
+
+    :param number_list: the input list of numbers that should be filtered
+    :returns List[int]: a list of numbers that are divisible by 3
+    """
+    temp_list = []
+    for number in number_list:
+        if number % 3 == 0:
+            temp_list.append(number)
+    return temp_list
+
+
+def filter_for_threes_alt(number_list: List[int]) -> List[int]:
+    """
+    alternative version to iterative approach  
+    """
+    return list(filter(lambda x: x % 3 == 0, number_list))
+
+
+def filter_for_threes_alt2(number_list: List[int]) -> List[int]:
+    """
+    second alternative approach to solve the challenge
+    """
+    return [x for x in number_list if x % 3 == 0]
+
+
+# region: testing for 3-filter
+a = filter_for_threes(range(0, 10))
+b = filter_for_threes_alt(range(0, 10))
+c = filter_for_threes_alt2(range(0, 10))
+
+print(a, b, c)
+# endregion
+# endregion
