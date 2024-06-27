@@ -1,6 +1,6 @@
-# with open("./example.md", "w") as f:
-#     f.write("some dummy text\n")
-#     f.write("some dummy text other\n")
-#     f.write("some dummy text other\n")
-#     f.write("some dummy text other\n")
-print("hello world")
+print("hello hello from hell")
+
+
+# -v babyshop_data:/app/babyshop_app
+-v / users/john/babyshop_data/bbs_db: / app/babyshop_app/db.sqlite3
+-v bbs_media: / app/media
