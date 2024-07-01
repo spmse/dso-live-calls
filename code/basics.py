@@ -113,5 +113,8 @@ def generate_number_list_in_interval(upper_bound: int, lower_bound: int = 0) -> 
 
 
 # -> [0,9]
-print(generate_number_list_in_interval(lower_bound=900, upper_bound=100))
-print(generate_number_list_in_interval(lower_bound=9, upper_bound=True))
+# print(generate_number_list_in_interval(lower_bound=900, upper_bound=100))
+# print(generate_number_list_in_interval(lower_bound=9, upper_bound=True))
+
+# get_character_from
+# calculate_char_occurences(character, text)
