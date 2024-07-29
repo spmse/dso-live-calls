@@ -4,5 +4,5 @@ def head():
     pass
 
 if __name__ == "__main__":
-    # TODO: add argparse initialization    
+    # TODO: add argparse initialization
     head()

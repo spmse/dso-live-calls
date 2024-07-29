@@ -1,8 +1,11 @@
-def tail():
-    # TODO: add option handling and implementation for tail program
-    # Hint: make use of helper functions
+# john
+import argparse
+import os
+
+def tail(filename, n):
+    # TODO: add implementation
     pass
+    
 
 if __name__ == "__main__":
-    # TODO: add argparse initialization    
     tail()
